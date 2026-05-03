@@ -102,7 +102,7 @@ jobs:
  
   build_docker_image_and_push:
     runs-on: self-hosted
-    needs: package_and_sonar
+    needs: package_sonar_scan
     steps:
     - uses: actions/checkout@v4
     - name: download artifact
