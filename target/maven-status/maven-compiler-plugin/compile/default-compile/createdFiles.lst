@@ -1,0 +1,7 @@
+springmvc\login\controller\RegistrationController.class
+springmvc\login\dao\UserDaoImpl.class
+springmvc\login\controller\LoginController.class
+springmvc\login\config\FrontController.class
+springmvc\login\dao\UserDao.class
+springmvc\login\config\MvcConfiguration.class
+springmvc\login\model\User.class
