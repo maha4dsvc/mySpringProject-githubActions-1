@@ -6,7 +6,7 @@ on:
 
 jobs:
   compile:
-    runs-on: ubuntu-latest
+    runs-on: self-runner
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -20,7 +20,7 @@ jobs:
 
 
   security-check:
-    runs-on: ubuntu-latest
+    runs-on: self-runner
     needs: compile
 
     steps:
@@ -43,7 +43,7 @@ jobs:
 
   
   tests:
-    runs-on: ubuntu-latest
+    runs-on: self-runner
     needs: security-check
     steps:
     - uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
       run: mvn test
 
   package:
-    runs-on: ubuntu-latest
+    runs-on: self-runner
     needs: tests
     steps:
     - uses: actions/checkout@v4
