@@ -6,7 +6,7 @@ on:
 
 jobs:
   compile:
-    runs-on: self-runner
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -20,7 +20,7 @@ jobs:
 
 
   security-check:
-    runs-on: self-runner
+    runs-on: self-hosted
     needs: compile
 
     steps:
@@ -43,7 +43,7 @@ jobs:
 
   
   tests:
-    runs-on: self-runner
+    runs-on: self-hosted
     needs: security-check
     steps:
     - uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
       run: mvn test
 
   package:
-    runs-on: self-runner
+    runs-on: self-hosted
     needs: tests
     steps:
     - uses: actions/checkout@v4
@@ -71,4 +71,3 @@ jobs:
       run: mvn package
 
 
-      
