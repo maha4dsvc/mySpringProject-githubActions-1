@@ -128,8 +128,9 @@ jobs:
       with:
         context: .  
         push: true
-        tags: maha4iac/myjavaapp00223344:latest
+        tags: maha4iac/myjavaapp00112233:latest
         file: ./Dockerfile
+
 
 
    
